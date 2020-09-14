@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body{
+            background-color: rgb(120, 120, 180);
+        }
+        .formstyle{
+            width: 300px;
+            height: 350px;
+            margin: auto ;
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgb(93, 138, 122);
+        }
+
+        input{
+            border-radius: 5px;
+            font-size: 20px;
+            width: 94px;
+            height: 45px;
+            margin: 2px 0;
+            
+            background-color: rgb(68, 83, 98);
+        }
+        input:hover{
+            cursor: pointer;
+        }
+        input:active{
+           
+            background-color:  rgb(77, 93, 110);
+        }
+
+        
+        #answer{
+            color: blanchedalmond;
+            
+            width: 285px;
+        }
+        
+        #clear{
+            color:rgb(6, 6, 102);
+            width: 290px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="formstyle" data-aos="zoom-out-down">
+        <form  name="forms">
+            <input type="text" id="answer" name="answer" > <br>
+
+            <input type="button" value=" 1 " onclick="forms.answer.value +='1' ">
+            <input type="button" value=" 2 " onclick="forms.answer.value +='2' ">
+            <input type="button" value=" 3 " onclick="forms.answer.value +='3' ">
+
+            <br>
+            <input type="button" value=" 4 " onclick="forms.answer.value +='4' ">
+            <input type="button" value=" 5 " onclick="forms.answer.value +='5' ">
+            <input type="button" value=" 6 " onclick="forms.answer.value +='6' ">
+            <br>
+
+            <input type="button" value=" 7 " onclick="forms.answer.value +='7' ">
+            <input type="button" value=" 8 " onclick="forms.answer.value +='8' ">
+            <input type="button" value=" 9 " onclick="forms.answer.value +='9' ">
+
+            <br>
+            <input type="button" value=" + " onclick="forms.answer.value +='+' ">
+            <input type="button" value=" - " onclick="forms.answer.value +='-' ">
+            <input type="button" value=" * " onclick="forms.answer.value +='*' ">
+            
+            <br>
+            <input type="button" value=" / " onclick="forms.answer.value +='/' ">
+            <input type="button" value=" 0 " onclick="forms.answer.value +='0' ">
+            <input type="button" value=" = " onclick="forms.answer.value =eval(forms.answer.value) ">
+
+            <br>
+            <input id ="clear" type="button" value="Clear All" onclick="forms.answer.value='' ">
+
+
+
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+              AOS.init();
+            </script>
+
+
+
+            
+        </form>
+    </div>
+    
+</body>
+</html>
